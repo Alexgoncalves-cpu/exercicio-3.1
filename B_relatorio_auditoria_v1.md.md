@@ -1,0 +1,356 @@
+ 1. Erros factuais ou inconsistências conceituais
+❌ Falha 1 — Classificação incorreta das “camadas” do blueprint
+Trecho:
+
+“Linha de interação interna | (c) Evidências físicas — artefatos tangíveis ou digitais”
+
+Problema:
+
+Em Service Blueprint clássico (Bitner et al.), “evidências físicas” não pertencem à linha de interação interna.
+Evidências físicas são uma camada paralela que permeia toda a experiência, não uma linha equivalente às demais.
+
+Justificativa:
+
+A estrutura proposta mistura conceitos:
+
+“Linha de interação interna” não é sinônimo de evidência física
+Isso compromete a modelagem metodológica do blueprint
+
+
+
+
+❌ Falha 2 — Confusão conceitual entre etapas vs artefatos
+Trecho:
+
+“Evidências físicas — artefatos tangíveis ou digitais em cada etapa”
+
+Problema:
+
+Nem toda etapa gera evidência física ou digital para o cidadão (ex.: validações internas, checagens de restrição).
+A afirmação induz a erro ao pressupor universalidade.
+
+
+❌ Falha 3 — Uso indevido da Lei nº 7.116/1983
+Trecho:
+
+“Lei nº 7.116/1983 (documentos de identificação)”
+
+Problema:
+
+Essa lei trata de carteira de identidade (RG), não regula passaporte diretamente.
+
+Justificativa:
+
+Embora tangencial, não é normativo central do processo de passaporte → inclusão como “obrigatória” é inadequada.
+
+
+❌ Falha 4 — Ausência do principal normativo do passaporte
+Omissão (erro factual por ausência crítica):
+
+Não menciona explícita e corretamente:
+
+Decreto nº 5.978/2006 (Regulamento de Passaportes)
+Normativos específicos da PF (portarias vigentes)
+
+
+
+Impacto:
+
+Compromete totalmente o eixo (d)
+
+
+✅ 2. Etapas de bastidor omitidas (backstage)
+❌ Falha 5 — Bastidor extremamente superficial
+Trecho:
+
+“O que o sistema SINPA faz após receber a solicitação?”
+
+Problema:
+O texto não contempla etapas críticas como:
+
+Consulta a bases:
+
+Receita Federal (CPF)
+Justiça Eleitoral (regularidade eleitoral)
+Serviço Militar (para homens)
+Mandados judiciais (restrição de saída do país)
+
+
+Validação antifraude
+Análise de impedimentos legais
+Integração com sistemas biométricos federais
+
+Justificativa:
+
+Essas etapas são essenciais → não são opcionais → omissão grave
+
+
+❌ Falha 6 — Processamento na PF mal descrito
+Trecho:
+
+“O que a PF verifica antes e após o atendimento presencial?”
+
+Problema:
+
+Não detalha:
+
+conferência documental formal
+registro biométrico no padrão ICAO
+validação da assinatura digital do requerimento
+decisão de deferimento/indeferimento
+
+
+
+
+❌ Falha 7 — Logística subdimensionada
+Trecho:
+
+“Como a logística (transportadora) é acionada...”
+
+Problema:
+
+Falta detalhar:
+
+contrato logístico específico
+cadeia de custódia de documento de segurança
+controles de extravio/roubo
+
+
+
+
+❌ Falha 8 — Falta de integração sistêmica
+Omissão:
+
+Não menciona:
+
+integração SINPA ↔ Casa da Moeda
+sistemas internos da PF (ex.: SINCRE ou equivalentes)
+gateways de pagamento (BCB/PIX)
+
+
+
+
+❌ Falha 9 — Tesouro tratado superficialmente
+Trecho:
+
+“Qual é o papel do Tesouro Nacional na conciliação do pagamento?”
+
+Problema:
+
+Não menciona:
+
+fluxo via SIAFI
+compensação da GRU
+validação automática vs manual
+
+
+
+
+✅ 3. Evidências físicas / digitais omitidas
+❌ Falha 10 — Ausência de evidências essenciais
+Exemplos omitidos:
+
+Protocolo com situação da solicitação (status)
+Registro de biometria capturada
+Termo de responsabilidade ou confirmação
+Registro interno de deferimento/indeferimento
+Sistema de acompanhamento do processo
+
+
+❌ Falha 11 — Falta distinção entre evidência do cidadão vs interna
+Problema:
+
+Mistura evidências:
+
+visíveis ao cidadão
+exclusivas do backend
+
+
+
+
+❌ Falha 12 — Não considera evidência negativa
+Omissão:
+
+Indeferimentos (com justificativa)
+Cancelamentos de solicitação
+Perda de GRU / prazo expirado
+
+
+✅ 4. Normativos relevantes omitidos
+❌ Falha 13 — LGPD citada sem vínculo operacional
+Trecho:
+
+“Legislação sobre proteção de dados biométricos (LGPD)”
+
+Problema:
+
+Não explica:
+
+base legal (obrigação legal/exercício regular de direito)
+finalidade específica no processo
+retenção de dados biométricos
+
+
+
+
+❌ Falha 14 — Ausência de normas críticas adicionais
+Omissões relevantes:
+
+Normas ICAO (documentos de viagem)
+Lei de Migração (Lei nº 13.445/2017)
+Normas de documentação civil
+Regras da PF sobre comparecimento presencial e prazos
+
+
+❌ Falha 15 — GRU mal enquadrada normativamente
+Problema:
+
+GRU não é regulada apenas por “IN da Receita”
+Envolve:
+
+STN (Secretaria do Tesouro Nacional)
+normativos do SIAFI
+
+
+
+
+✅ 5. Fail points não identificados
+❌ Falha 16 — Categoria incompleta de falhas
+Problema:
+
+
+Faltam categorias críticas:
+
+
+Falhas jurídicas:
+
+restrição judicial impeditiva
+
+
+
+Falhas de interoperabilidade:
+
+inconsistência entre bases governamentais
+
+
+
+Falhas de governança:
+
+divergência de interpretação entre unidades
+
+
+
+
+❌ Falha 17 — Falhas específicas omitidas
+Exemplos relevantes não citados:
+
+CPF irregular impede emissão
+atraso por demanda reprimida
+expiração da GRU antes da validação
+inconsistência biométrica
+divergência de dados cadastrais
+
+
+❌ Falha 18 — Frequência de falhas sem base empírica
+Trecho:
+
+“Frequência (alta/média/baixa)”
+
+Problema:
+
+Não define método para mensuração
+Sem dados → classificação vira inferência
+
+
+✅ 6. Inferências mal suportadas / fontes frágeis
+❌ Falha 19 — Uso problemático de “Reclame Aqui” como evidência
+Trecho:
+
+“relatos de usuários em fóruns/reclame aqui”
+
+Problema:
+
+Fonte não controlada, sem representatividade estatística
+
+
+❌ Falha 20 — Triangulação inexequível
+Trecho:
+
+“confirme cada achado em pelo menos duas fontes independentes”
+
+Problema:
+
+Para bastidores e sistemas internos isso é inviável:
+
+informações não são publicadas
+LAI não garante resposta completa
+
+
+
+
+❌ Falha 21 — Premissa de rastreabilidade total
+Trecho:
+
+“todo achado tem fonte citada”
+
+Problema:
+
+Irrealista para:
+
+processos internos da PF
+operação da Casa da Moeda
+contratos sensíveis
+
+
+
+
+✅ 7. Problemas estruturais do meta‑prompt
+❌ Falha 22 — Não garante visão AS-IS real
+Problema:
+
+Foco excessivo em fontes públicas → pode capturar processo “prescrito”, não o real
+
+
+❌ Falha 23 — Dependência de “mapa de atores” externo
+Trecho:
+
+“13 atores mapeados — arquivo C_mapa_atores.md”
+
+Problema:
+
+Blueprint depende de elemento que não está validado nem apresentado
+
+
+❌ Falha 24 — Fluxo incompleto para casos reais
+Trecho:
+
+fluxo com 6 etapas
+
+Problema:
+
+Não contempla:
+
+indeferimento
+reemissão
+urgência
+passaporte anterior válido
+
+
+
+
+✅ Conclusão Geral da Auditoria
+A pesquisa não é apenas incompleta — ela apresenta limitações estruturais relevantes:
+Principais fragilidades:
+
+Base normativa incorreta/incompleta
+Bastidores sub-representados (principal falha)
+Fail points genéricos e não empíricos
+Premissas metodológicas irrealistas (triangulação e rastreabilidade)
+Mistura conceitual em Service Blueprint
+
+Risco prático:
+Se utilizada, essa pesquisa geraria um blueprint:
+
+parcial
+excessivamente superficial no backend
+mais descritivo do que analítico
