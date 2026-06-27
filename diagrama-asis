@@ -1,0 +1,280 @@
+Service Blueprint AS‑IS — Emissão de Passaporte (Polícia Federal)
+🔷 Visão geral (linha do tempo do serviço)
+[1] Solicitação → [2] Pagamento → [3] Agendamento → 
+[4] Atendimento presencial → [5] Produção → [6] Retirada
+
+
+🧩 Blueprint estruturado (AS‑IS)
+🟦 1. Linha de interação (Jornada do cidadão – frontstage)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EtapaAção do cidadãoCanal1Preenche formulário no SINPA (gov.br)Digital2Paga GRU (PIX/cartão/boleto)Digital3Agenda atendimento na PFDigital4Comparece à unidade PF com documentosPresencial5Aguarda produção (sem ação direta)—6Retira passaporte presencialmentePresencial
+
+🟧 2. Linha de visibilidade (Interação serviço ↔ cidadão)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EtapaInteração visível1Sistema gera protocolo da solicitação2Sistema confirma pagamento (ou aguarda compensação)3Sistema disponibiliza agenda e confirma horário4Servidor PF confere documentos e coleta biometria5Nenhuma interação direta (status indireto)6Entrega do passaporte ao cidadão
+
+🟥 3. Processos de bastidor (backstage – não visível)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EtapaProcessos internos1SINPA valida dados e gera GRU2Tesouro Nacional processa pagamento e concilia GRU3Sistema Agenda Web gerencia vagas e capacidade4PF valida documentação, registra biometria, abre processo5Casa da Moeda produz o passaporte5Logística transporta documento até unidade PF6Unidade PF guarda e controla disponibilidade para retirada
+
+🟨 4. Evidências físicas/digitais (physical evidence)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EtapaEvidência1Protocolo de solicitação (PDF/número)2GRU + comprovante de pagamento3Comprovante de agendamento4Checklist de documentos / recibo de atendimento5(eventual) status online / e-mail6Passaporte físico
+
+🟩 5. Suporte (sistemas / atores / infraestrutura)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EtapaSistemas / atores1SINPA / gov.br2Banco / Tesouro Nacional3Agenda Web PF4Polícia Federal (atendentes)5Casa da Moeda + transportadora6Polícia Federal (entrega)
+
+⚠️ 6. Fail points (pontos críticos – visão AS‑IS)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EtapaPossíveis falhas1Instabilidade no SINPA2Demora na compensação da GRU3Falta de vagas para agendamento4Documento incorreto → necessidade de novo agendamento5Atraso na produção (Casa da Moeda)5Problemas logísticos (atraso/extravio)6Prazo expirado para retirada (90 dias)
+
+🎯 Leitura analítica (importante para uso em auditoria/processo)
+Este blueprint revela claramente:
+🔎 Gargalos principais (AS‑IS)
+
+Agendamento (restrição de capacidade)
+Validação documental (retrabalho do cidadão)
+Produção/logística (externa à PF → risco de atraso)
+
+🔎 Característica estrutural relevante
+
+Forte dependência de atores externos:
+
+Tesouro Nacional → pagamento
+Casa da Moeda → produção
+Transportadora → entrega
+
+
+
+🔎 Natureza do serviço
+
+Híbrido digital-presencial
+Alto peso de compliance (documental e biométrico)
+Baixa transparência na fase de produção (opacidade para o cidadão)
+
+
+📌 Representação simplificada (layout visual rápido)
+CIDADÃO       Serviço Visível           Bastidor
+--------      ------------------       ------------------------
+Solicita  →   Protocolo gerado    →    SINPA valida dados
+Paga      →   Confirmação GRU     →    Tesouro concilia
+Agenda    →   Agenda disponível   →    Sistema gerencia vagas
+Comparece →   Atendimento PF      →    PF valida + coleta biometria
+Aguarda   →   (sem interação)     →    Casa da Moeda produz
+Retira    →   Entrega documento   →    PF controla estoque
+
+
+✅ Conclusão
+O processo AS‑IS é:
+
+Sequencial e rigidamente dependente de etapas anteriores
+Altamente regulado
+Com pontos críticos fora do controle direto da PF
